@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: #111;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Home Prompt */
+.home-prompt {
+    font-size: 1.6rem;
+    color: #6e91DD;
+    text-align: center;
+    padding: 100px 20px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Pulse animation for prompt */
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid #6e91DD;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .12em;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #6e91DD }
+}
+
+/* Navigation */
+#scp-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 50px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 999;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    padding: 10px;
+}
+
+#scp-nav a {
+    color: #DC92B1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 20px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#scp-nav a:hover,
+#scp-nav a.active {
+    background-color: #6e91DD;
+    color: #111;
+    transform: scale(1.05);
+}
+
+/* Main Grid Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    height: 500px;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(216, 54, 181, 0.6);
+}
+
+/* Image Section */
+#image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#image-container img {
+    width: 100%; 
+    max-width: 600px; 
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#image-container img:hover {
+    transform: scale(1.02);
+}
+
+
+/* Content Section */
+#display {
+    background: #31333F;
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.6s ease;
+    overflow-y: auto;
+    max-height: 68vh;
+}
+
+#display h2 {
+    font-size: 2.0rem;
+    color: #DC92B1;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#display h3 {
+    font-size: 1.6rem;
+    color: #6e91DD;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#display p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#display h4 {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Buttons */
+#read {
+    background-color: #3174af;
+    color: #1a1a1a;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#read:hover {
+    background-color: #00aacc;
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(0, 172, 204, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+        height: auto; 
+    }
+
+    #image-container {
+        max-width: 100%;
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+
+    #scp-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #scp-nav.show {
+        display: flex;
+    }
+
+    #scp-nav a {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    #display {
+        order: 2;
+        background: #31333F;
+        border-radius: 15px;
+        padding: 30px;
+        backdrop-filter: blur(12px);
+        animation: fadeIn 0.6s ease;
+        max-height: none; 
+        overflow-y: visible;
+    }
+
+    /* Make text smaller */
+    #display p {
+        font-size: 14px;
+    }
+
+    #read {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #DC92B1;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    #scp-nav a {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        height: auto; 
+    }
+
+    #image-container img {
+        width: 100%; 
+        max-width: 100%;
+        height: auto; 
+    }
+
+    #display p {
+        font-size: 14px;
+    }
+
+    #read {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #scp-nav a {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+}
+
+
+
+/* Hamburger Button - Default Hidden */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #DC92B1;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Show hamburger and hide nav on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #scp-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    #scp-nav.show {
+        display: flex;
+    }
+
+    #scp-nav a {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+}

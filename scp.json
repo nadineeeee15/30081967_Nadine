@@ -1,0 +1,37 @@
+[
+    {
+        "subject": "SCP-002",
+        "class": "Euclid",
+        "description": "SCP-002 is a tumor-like mass approximately 60 cubic meters in volume. It has an iron hatch that leads to an interior resembling a small, low-cost apartment. The room includes a window not visible from the exterior and furniture made from human biological materials. Each item shows unique or partial human DNA.",
+        "containment": "SCP-002 must remain connected to a power source to stay inactive. In the event of power failure, the area must be sealed, evacuated, and exposed to alternating X-ray and UV light until power is restored. The containment chamber should maintain negative air pressure. Teams near SCP-002 must include at least two members maintaining physical contact. Only Level 3 personnel or higher may enter, unless authorized in writing by two off-site Level 4 administrators. Authorized staff must be escorted, temporarily surrender clearance, and complete a 72-hour quarantine and psychological assessment after contact.",
+        "image": "images/1.jpg"
+    },
+    {
+        "subject": "SCP-003",
+        "class": "Euclid",
+        "description": "SCP-003 consists of two parts: SCP-003-1, a sentient bio-mechanical structure resembling an ancient motherboard, and SCP-003-2, a rune-covered tablet. SCP-003-1 grows by converting surrounding material and mimics living organisms. SCP-003-2 controls SCP-003-1's growth with radiation. Both react when temperatures drop below 35°C.",
+       "containment": "SCP-003 must stay above 35°C, ideally over 100°C. No complex life forms can contact it. In power failure, personnel must maintain skin contact with SCP-003-1 to stabilize it. Personnel must be parasite-free and sterilized after contact. SCP-003-1 must remain on SCP-003-2 unless in an emergency. Report significant changes in SCP-003-2’s rune activity. SCP-003-2 must stay powered by Generator 003-IX.",
+        "image": "images/2.png"
+    },
+    {
+        "subject": "SCP-004",
+        "class": "Euclid",
+        "description": "SCP-004 consists of an old wooden barn door (SCP-004-1) and twelve rusted steel keys (SCP-004-2 through SCP-004-13), which open the entrance to an abandoned factory in [DATA EXPUNGED].",
+       "containment": "SCP-004 keys (SCP-004-2 to SCP-004-13) must be handled with care and can only be moved off-site with two Level 4 security personnel. No component of SCP-004 should be taken through SCP-004-1. If containment is breached, the keys must be retrieved, and the door closed before activating Site 62’s warhead. Unauthorized removal of keys results in immediate termination. Level 1 clearance is required for basic access, Level 4 for keys.",
+        "image": "images/3.jpg"
+    },
+    {
+        "subject": "SCP-005",
+        "class": "Safe",
+       "description": "SCP-005 is an ornate key resembling those from the 1920s. It can open any lock, mechanical or digital, with ease. It was discovered when a civilian used it to infiltrate a high-security facility. The origin of its ability is unknown.",
+        "containment": "SCP-005 poses no immediate risk but requires restricted access. Removal from containment requires approval from at least one Level 4 personnel.",
+        "image": "images/4.jpg"
+    },
+    {
+        "subject": "SCP-006",
+        "class": "Safe",
+       "description": "SCP-005 is an ornate key resembling those from the 1920s. It can open any lock, mechanical or digital, with ease. It was discovered when a civilian used it to infiltrate a high-security facility. The origin of its ability is unknown.",
+        "containment": "SCP-005 poses no immediate risk but requires restricted access. Removal from containment requires approval from at least one Level 4 personnel.",
+        "image": "images/5.png"
+    }
+]
